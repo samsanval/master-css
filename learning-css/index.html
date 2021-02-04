@@ -6,27 +6,45 @@
         <link rel="stylesheet" type="text/css" href="styles.css"/>
     </head>
     <body>
-        <h1>Curso CSS</h1>
+        <h1 id="title">Curso CSS</h1>
         <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Temario</a></li>
+            <ul id="menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">SASS</a></li>
+                <li><a href="#">LESS</a></li>
+            </ul>
             <li><a href="#">Reseñas</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
         <div id="description">
             <h2>Descripción del curso</h2>
-            <p>
+            <p class="paragraph p1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed lorem in dui aliquam rutrum. Vestibulum vel metus leo. Vivamus eget magna ut nisi congue viverra tempus a justo. Maecenas nec orci a dui fermentum tempus id at mauris. Sed quis felis venenatis, scelerisque mi at, accumsan nisi. Donec id tincidunt turpis. Duis quis pretium ligula, a eleifend nunc. Praesent est nisi, malesuada nec ligula id, laoreet fringilla massa. Etiam eget sollicitudin mauris. Ut vel velit id turpis posuere dictum ornare vitae leo. Morbi sed arcu ac dui vulputate suscipit. Curabitur non tortor vehicula purus efficitur mollis a vulputate mi. Nam est enim, feugiat vitae magna sed, tincidunt varius magna. Ut ullamcorper ex ut maximus sodales. Ut est ipsum, pretium sit amet cursus id, vulputate et est. Cras vestibulum condimentum velit, finibus vulputate augue sollicitudin congue. 
             </p>
-            <p>
+            <p class="paragraph p2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed lorem in dui aliquam rutrum. Vestibulum vel metus leo. Vivamus eget magna ut nisi congue viverra tempus a justo. Maecenas nec orci a dui fermentum tempus id at mauris. Sed quis felis venenatis, scelerisque mi at, accumsan nisi. Donec id tincidunt turpis. Duis quis pretium ligula, a eleifend nunc. Praesent est nisi, malesuada nec ligula id, laoreet fringilla massa. Etiam eget sollicitudin mauris. Ut vel velit id turpis posuere dictum ornare vitae leo. Morbi sed arcu ac dui vulputate suscipit. Curabitur non tortor vehicula purus efficitur mollis a vulputate mi. Nam est enim, feugiat vitae magna sed, tincidunt varius magna. Ut ullamcorper ex ut maximus sodales. Ut est ipsum, pretium sit amet cursus id, vulputate et est. Cras vestibulum condimentum velit, finibus vulputate augue sollicitudin congue. 
             </p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed lorem in dui aliquam rutrum. Vestibulum vel metus leo. Vivamus eget magna ut nisi congue viverra tempus a justo. Maecenas nec orci a dui fermentum tempus id at mauris. Sed quis felis venenatis, scelerisque mi at, accumsan nisi. Donec id tincidunt turpis. Duis quis pretium ligula, a eleifend nunc. Praesent est nisi, malesuada nec ligula id, laoreet fringilla massa. Etiam eget sollicitudin mauris. Ut vel velit id turpis posuere dictum ornare vitae leo. Morbi sed arcu ac dui vulputate suscipit. Curabitur non tortor vehicula purus efficitur mollis a vulputate mi. Nam est enim, feugiat vitae magna sed, tincidunt varius magna. Ut ullamcorper ex ut maximus sodales. Ut est ipsum, pretium sit amet cursus id, vulputate et est. Cras vestibulum condimentum velit, finibus vulputate augue sollicitudin congue. 
             </p>
         </div>
+        <div id="usuario">
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre"/>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos"/>
+                <input type="submit" value="Enviar"/>
+            </form>
+        </div>
+        <div id="saludo">
+            <h1>Me llamo Samuel</h1>
+        </div>
         <footer>
-            Todos los derechos reservados &copy;
+            Todos los derechos reservados <a href="#">samuel.sanchez.com</a> &copy;
         </footer>
     </body>
 </html>
