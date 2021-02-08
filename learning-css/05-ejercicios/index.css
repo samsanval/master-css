@@ -68,25 +68,33 @@ header {
     width: 30%;
     border: 1px solid navy;
     float: left;
-    min-height: 500px;
+    min-height: 100px;
+    max-height: 300px;
     text-align: center;
+    overflow-y: scroll;
 }
 
 #content .box{
     width : 40%;
     height: 240px;
     background-color: aqua;
-    border: 5px solid cadetblue;
-    color: white;
+    border: 1px solid cadetblue;
     float : left;
     margin: 20px;
     margin-left: 40px;
+    text-align: center;
+    line-height: 200px;
+    color: #444;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 50px 10px 4px 61px;
+
 }
 #content > h1{
     text-align: center;
     border-bottom: 1px solid #ccc;
     padding: 10px;
     color: #444;
+    text-shadow: 1px 1px 2px #ccc;
 }
 
 footer {
@@ -97,4 +105,36 @@ footer {
     height: 55px;
     line-height: 55px;
     border-top: 1px solid #ccc;
+}
+.inner-shadow {
+    box-shadow: 5px 5px 10px gray inset !important;
+}
+.free {
+    position:absolute;
+    top: 300px;
+    right: 50%;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+.free2{
+    background-color: green;
+    top: 280px;
+    right: 50%;
+    z-index: 999;
+
+}
+.fixed {
+    position:fixed;
+    top: 50%;
+    left: 0%;
+
+    background-color: navy;
+    color:white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 13px;
 }
