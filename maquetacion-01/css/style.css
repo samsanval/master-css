@@ -9,6 +9,23 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Fjalla";
+    src: url('fonts/FjallaOne-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:"icons";
+    src: url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format("svg");
+    src: url('fonts/websymbols-regular-webfont.eot'),
+        url('fonts/websymbols-regular-webfont.eot?#iefix') format("embedded-opentype"),
+        url('fonts/websymbols-regular-webfont.woff') format("woff"),
+        url('font/websymbols-regular-webfont.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 
 /*Elementos generales*/
@@ -21,6 +38,17 @@ body{
     background-image: url("img/paven.png");
 }
 
+a{
+    color: #529125;
+    text-decoration: none;
+}
+a:hover{
+    color: #285616;
+}
+a:visited{
+    color: #263a1f;
+
+}
 /*Header*/
 
 #header {
@@ -127,4 +155,208 @@ body{
 }
 #nav > ul > li:hover > ul > li a:hover{
     background-color: #ccc;
+}
+/*CONTENIDO*/
+
+#content {
+    width: 1250px;
+    min-height: 1100px;
+    margin: 0px auto;
+    font-family: sans-serif, Arial, Helvetica;
+
+}
+
+/*SIDEBAR*/
+
+#sidebar, #frase {
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: sans-serif,Arial, Helvetica;
+}
+#frase {
+    width: 180px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+#sidebar .widget{
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333;
+}
+#sidebar .widget:last-child{
+    margin-bottom: 20px;
+}
+#sidebar h3{
+    display: block;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    background-color: #f2f3f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+}
+
+.red {
+    color: rgb(138, 54, 54) !important;
+}
+
+.blue{
+    color: rgb(41, 23, 255) !important;
+}
+
+.orange{
+    color: rgb(233, 133, 40)
+}
+
+/*FORMULARIOS*/
+input[type="text"], input[type="email"], input[type="password"], select{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px inset;
+    background-color: white;
+    padding: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select{
+    border: 1px solid #70b301;
+    color: black;
+}
+input[type="button"], input[type="submit"], input[type="reset"], button{
+    display: block;
+    border-radius: 2px;
+    border: 1px solid green;
+    cursor: pointer;
+    width: 60px;
+    padding: 3px;
+    background-color: #70b301;
+    color: white;
+}
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover{
+    box-shadow: 0px 0px 2px gray;
+}
+input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active, button:active{
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 1px #ccc;
+
+
+}
+/*FORMULARIOS/LATERAL*/
+
+#sidebar div label, #sidebar div input[type="text"],#sidebar div input[type="email"], #sidebar div input[type="password"],
+#sidebar div a{
+    display:block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+#sidebar div input[type="button"],  #sidebar div input[type="submit"], #sidebar div button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#sidebar input, #sidebar label{
+    margin: 0 auto;
+    text-align: center;
+}
+#sidebar li{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}
+
+/*SECCIONES*/
+#sections{
+    float: right;
+    width: 75%;
+    font-family: sans-serif, Arial, Helvetica;
+    margin-right: 20px;
+}
+#sections .title{
+    font-family: "Fjalla";
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-top: -20px;
+}
+
+#sections section{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333;
+    font-size: 16px;
+    overflow: hidden;
+}
+#sections .article{
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#sections .date{
+    color: grey;
+    font-size: 14px;
+}
+
+#sections .sticker1, #sections .sticker2{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+#sections .sticker2{
+    margin-left: 860px;
+}
+.icon{
+    font-family: 'icons';
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/*FOOTER*/
+#history{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#footer {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #333;
+    padding-top: 10px;
+    color:white;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px grey;
 }
