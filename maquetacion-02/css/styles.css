@@ -32,7 +32,7 @@ body {
 }
 
 .wrap {
-  width: 1200px;
+  width: 1250px;
   margin: auto;
 }
 #header {
@@ -65,11 +65,154 @@ body {
   transition: all 300ms;
   margin-right: 65px;
 }
-#logo .gear {
+#logo .gear, .icon {
   font-family: "WebSymbolsRegular";
   display:block;
   float: left;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 8px;
   margin-left: 26px;
 }
+#menu {
+  float: right;
+  height: 70px;
+  background: transparent;
+}
+#menu ul li{
+  font-size: 24px;
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+  letter-spacing: 1px;
+  line-height: 70px;
+}
+#menu ul li a{
+   color:white;
+   display: block;
+   text-decoration: none;
+   transition: all 300ms;
+}
+#menu ul li a:hover{
+    color: #37bcf9;
+    transform: scale(1.2,1.2);
+}
+#banner {
+  width: 95.6%;
+  height: 100px;
+  border: 10px solid white;
+  box-shadow: 0px 0px 2px grey;
+  background-image: url('../css/assets/img/bakbaner.png');
+  background-position: -200px -200px;
+}
+#banner h1{
+  display: block;
+  width: 850px;
+  font-family: 'BebasNue';
+  color: white;
+  font-size: 45px;
+  font-weight: normal;
+  text-shadow: 2px 2px 1px black;
+  letter-spacing: 2px;
+  margin: 27px auto;
+  padding-left: 400px;
+
+}
+.card {
+  width: 205px;
+  height: 305px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ddd;
+  background: white;
+  cursor: pointer;
+  float: left;
+  overflow: hidden;
+  margin: 22px;
+  margin-top: 40px;
+}
+.card:last-child {
+  margin-right: 0px;
+}
+.card .icon{
+  display: block;
+  width: 100%;
+  height: 130px;
+  line-height: 110px;
+  text-align: center;
+  margin: 0px auto;
+}
+.card .category{
+  width: 100%;
+  font-family: "TrebuchetMS";
+  font-size: 21px;
+  color:#00538c;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.card .description{
+  text-align: center;
+  color:#00538c;
+  font-family: "TrebuchetMS";
+  font-size: 15px;
+
+
+}
+
+/*LATERAL*/
+#lateral {
+  width: 300px;
+  min-height: 1200px;
+  font-family: "TrebuchetMS";
+  float: right;
+  margin: 20px;
+}
+aside h3{
+  display: block;
+  width: auto;
+  height: 45px;
+  line-height: 49px;
+  background-image: url('../css/assets/img/pxgray.png');
+  background-color: white;
+  box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+  font-size: 30px;
+  font-family: "BebasNue";
+  font-weight: normal;
+  letter-spacing: 2px;
+  padding-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+aside h3:first-child{
+  margin-top: 0px;
+}
+#search{
+  width: 90%;
+  height: 30px;
+  margin: 10px auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #ccc inset;
+}
+#lateral input[type='text'] {
+  width: 75%;
+  height: 30px;
+  border:none;
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ccc;
+}
+#lateral input[type='button'],
+#lateral input[type='submit']{
+  height: 30px;
+  float:right;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+  border:none;
+  border-left: 1px solid #ccc;
+  color: #555;
+  padding-left: 5px;
+  margin-top: 0px;
+}
+
