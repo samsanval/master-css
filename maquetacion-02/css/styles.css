@@ -65,13 +65,37 @@ body {
   transition: all 300ms;
   margin-right: 65px;
 }
-#logo .gear, .icon {
+#logo .gear {
+  font-family: "WebSymbolsRegular";
+  display:block;
+  float: left;
+  font-size: 30px;
+  margin-top: 8px;
+  margin-left: 26px;
+  animation-name: rotate-gear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#logo:hover{
+  border-radius: 2px;
+  color: black;
+  background-color: #ccc;
+}
+#logo:hover h3{
+  animation: fromRight 300ms linear;
+}
+#logo:hover .gear{
+  animation: fromBelow 500ms linear;
+}
+.icon{
   font-family: "WebSymbolsRegular";
   display:block;
   float: left;
   font-size: 20px;
   margin-top: 8px;
   margin-left: 26px;
+
 }
 .clearfix {
   float:none;
@@ -106,6 +130,8 @@ body {
   box-shadow: 0px 0px 2px grey;
   background-image: url('../css/assets/img/bakbaner.png');
   background-position: -200px -200px;
+  overflow: hidden;
+  animation: backBanner 10s linear;
 }
 #banner h1{
   display: block;
@@ -118,6 +144,7 @@ body {
   letter-spacing: 2px;
   margin: 27px auto;
   padding-left: 400px;
+  animation: showText 10s linear;
 
 }
 .card {
@@ -131,6 +158,11 @@ body {
   overflow: hidden;
   margin: 22px;
   margin-top: 40px;
+  transition: all 300ms;
+
+}
+.card:hover {
+  background-color: black;
 }
 .card:last-child {
   margin-right: 0px;
@@ -142,6 +174,13 @@ body {
   line-height: 110px;
   text-align: center;
   margin: 0px auto;
+  transition: all 300ms;
+}
+.card:hover .icon {
+  font-size: 70px;
+  color: #37bcf9;
+  animation: showIcon 300ms linear;
+
 }
 .card .category{
   width: 100%;
@@ -151,14 +190,22 @@ body {
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
+  transition: all 300ms;
+}
+.card:hover .category {
+  color: white;
+  animation: showCategory 400ms linear;
 }
 .card .description{
   text-align: center;
   color:#00538c;
   font-family: "TrebuchetMS";
   font-size: 15px;
-
-
+  transition: all 300ms;
+}
+.card:hover .description {
+  color: white;
+  animation: showDescription 400ms linear;
 }
 
 /*LATERAL*/
@@ -317,6 +364,29 @@ aside h3:first-child{
   margin-right: 100px;
   margin-bottom: 10px;
 }
+#social div .overlay {
+  display: block;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 1px #ccc;
+  border: 3px solid white;
+  box-shadow: 0px 0px 4px #ccc;
+  background-color: #f4f7fe;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 200px;
+  margin-left: 70px;
+  margin-top: 1px;
+  transform: translateX(-80%);
+  opacity: 0;
+  transition: all 300ms;
+}
+#social div:hover .overlay {
+  opacity: 1;
+  transform: translateX(0%);
+}
 #articles {
   width: 860px;
   float:left;
@@ -390,6 +460,7 @@ aside h3:first-child{
   margin-top: 60px;
   line-height: 100px;
   text-align: center;
+  transition: all 500ms;
 }
 #blog a{
   display:block;
@@ -398,6 +469,19 @@ aside h3:first-child{
   letter-spacing: 3px;
   color: #2f78bf;
   text-decoration: none;
+  transition: all 500ms;
+
+}
+#blog:hover{
+  background-color: #333;
+  border: 10px solid #37bcf9;
+  border-radius: 240px;
+  box-shadow: 0px 0px 10px grey;
+  animation: blink 10s infinite linear;
+}
+#blog:hover a{
+  color: white;
+  text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
 }
 footer {
   width: 100%;
@@ -463,4 +547,108 @@ footer img {
 }
 footer #browsers img {
   width: 45px;
+}
+
+@keyframes rotate-gear{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes fromBelow{
+  0%{
+   transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(200%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+@keyframes fromRight {
+  from{
+    transform: translateX(200%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes backBanner {
+  0%{
+    background-position: 0px 0px;
+  }
+  100%{
+    background-position: -200px -200px;
+  }
+}
+@keyframes showText {
+  0%{
+    transform: translateX(-600%) scale(5,5);
+    opacity: 1;
+  }
+  50%{
+    transform: translateX(600%) scale(5,5);
+    opacity: 1;
+  }
+  70%{
+    transform: translateX(-600%) scale(5,5);
+    text-shadow: none;
+    color:transparent;
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%) scale(1,1);
+    text-shadow: 2px 2px 2px gray;
+    opacity: 1
+  }
+}
+@keyframes showIcon {
+  from{
+    transform: translateY(-200%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+@keyframes showCategory{
+  from{
+    transform: translateY(-300%);
+    color:black;
+  }
+  to{
+    transform: translateY(0%);
+    color:white;
+  }
+}
+@keyframes showDescription{
+  from{
+    transform: translateX(-300%);
+    color: black;
+
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes blink{
+  0%{
+    border: 10px solid #37bcf9;
+  }
+  25%{
+    border: 10px solid green;
+  }
+  50%{
+    border: 10px solid yellow;
+
+  }
+  75%{
+    border: 10px solid white;
+
+  }
+  100%{
+    border: 10px solid #37bcf9;
+  }
 }
