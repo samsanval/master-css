@@ -84,6 +84,7 @@ h1 {
   }
 }
 
+
 $contador: 1;
 @for $contador from 1 through 3 {
   .list ul:nth-child(#{$contador}){
